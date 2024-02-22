@@ -1,10 +1,15 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent } from "react";
 
-class PureReactComponent extends PureComponent {
-  render() {
-    console.log('PureReactComponent rendered');
-    return <div>{this.props.message}</div>;
+class PureCounter extends PureComponent{
+  render(){
+    console.log("pure counter rendered")
+
+    return (
+      <>
+        <h3>{this.props.message}</h3>
+      </>
+    )
   }
 }
 
-export default PureReactComponent;
+export default PureCounter;

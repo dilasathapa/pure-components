@@ -1,31 +1,29 @@
-import './App.css'
-import React from 'react';
-import PureReactComponent from './Component/PureCounter';
-import RegularComponent from './Component/SimpleCounter';
+import React from "react";
+import { Component } from "react";
+import SimpleCounter from "./Component/SimpleCounter";
+import PureCounter from "./Component/PureCounter";
 
-class App extends React.Component{
+class App extends Component{
   constructor(){
     super();
     this.state = {
-      message : "Hello there"
+      message : "Squad 51"
     }
   }
-
   componentDidMount(){
     setTimeout(()=>{
-      this.setState({message : "updated message"})
-    },2000)
+      this.setState({ message : "vels"})
+    }, 2000)
   }
-
   render(){
     return (
       <>
-      <RegularComponent message={this.state.message}/>
-      <PureReactComponent message={this.state.message}/>
-      
+        <SimpleCounter message={this.state.message}/>
+        <PureCounter message={this.state.message} />
+
       </>
     )
   }
 }
 
-export default App
+export default App;

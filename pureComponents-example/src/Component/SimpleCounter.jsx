@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-class RegularComponent extends Component {
-  render() {
-    console.log('RegularComponent rendered');
-    return <div>{this.props.message}</div>;
+class SimpleCounter extends Component{
+  render(){
+    console.log("simple counter rendered")
+    return (
+      <>
+        <h3>{this.props.message}</h3>
+      </>
+    )
   }
 }
 
-export default RegularComponent;
+export default SimpleCounter
